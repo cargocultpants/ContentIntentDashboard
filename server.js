@@ -1,10 +1,10 @@
 // Dependencies
 const express = require('express');
 const app = express();
+const serveStatic = require('serve-static');
 
-app.get('/', function(req, res) {
-  res.send('Yep.');
-});
+
+app.static('/', 'index.html');
 
 // Declare port variable;
 const port = 8000;

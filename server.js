@@ -3,8 +3,12 @@ const express = require('express');
 const app = express();
 const serveStatic = require('serve-static');
 
-
-app.static('/', 'index.html');
+// Application Settings
+app.use(express.static('./'));
+app.set('views', './');
+app.get('/', function(req, res){
+  res.render('index.ejs');
+});
 
 // Declare port variable;
 const port = 8000;

@@ -1,0 +1,12 @@
+{
+  "name": "contentintent-dashboard",
+  "version": "1.0.0",
+  "description": "Package for ContentIntent Dashboard",
+  "main": "index.js",
+  "repository": "https://github.com/smtlb/ContentIntentDashboard.git",
+  "author": "Shannon Matloob <smtlb90@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

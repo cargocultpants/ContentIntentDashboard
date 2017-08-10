@@ -21,10 +21,10 @@ db.once('open', function() {
 ////////////// Application Settings ////////////
 
 // make express look in the root directory for assets
-app.use(express.static('./'));
+app.use(express.static('/public'));
 
 // reset ejs render to look in the root folder
-app.set('views', './');
+// app.set('views', './');
 
 // home page
 app.get('/', function(req, res){

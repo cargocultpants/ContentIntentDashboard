@@ -12,7 +12,10 @@ const contentSchema = mongoose.Schema({
     medium: Array,
     date: Date,
     campaign: String,
-    score: [Score.schema]
+    score: {
+      purchase_intent: Number,
+      brand_favorability: Number
+    }
 });
 
 

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Content = require('./contentSchema.js')
 
 // Get a reference to and define a schema
 
@@ -6,7 +7,8 @@ const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
     name: String,
-    admin: Boolean
+    admin: Boolean,
+    content: [Content.schema]
 });
 
 userSchema.methods.verify = function () {
@@ -16,7 +18,7 @@ userSchema.methods.verify = function () {
   console.log(msg);
 } //end verify method
 
-const User = mongoose.model('User', userSchema);
+const user = mongoose.model('User', userSchema);
 
 const jonah = new User({
     name: 'Jonah Bliss',
@@ -40,6 +42,8 @@ User.find(function (err, users) {
   console.log(users.length);
   console.log("All the users: ", users);
 });
+
+module.exports = user;
 
 
 // https://docs.mongodb.com/getting-started/shell/insert/

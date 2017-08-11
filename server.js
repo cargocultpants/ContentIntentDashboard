@@ -4,6 +4,12 @@ const app = express();
 const serveStatic = require('serve-static');
 const mongoose = require('mongoose');
 
+
+////////////// Application Settings ////////////
+
+// make express look in the public directory for assets
+app.use(express.static('public'));
+
 // Open a connection to the ContentIntent database on locally running instance of MongoDB
 
 mongoose.connect('mongodb://localhost:27017/contentintent');
@@ -14,17 +20,13 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('Connected to ContentIntent Database');
-
-
 }); //end db.once() function
 
-////////////// Application Settings ////////////
+var usersController = require('./controllers/users.js');
+app.use('/users', usersController);
 
-// make express look in the public directory for assets
-app.use(express.static('public'));
-
-// reset ejs render to look in the root folder
-// app.set('views', './');
+// var contentController = require('./controllers/content.js');
+// app.use('/content', contentController);
 
 // home page
 app.get('/', function(req, res){

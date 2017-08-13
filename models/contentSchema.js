@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-require('./scoreSchema.js')
 
 // Get a reference to and define a schema
 
@@ -21,16 +20,21 @@ const contentSchema = mongoose.Schema({
 
 const content = mongoose.model('Content', contentSchema);
 
-const dummyPost = mongoose.Schema({
-    user: [userSchema].name,
-    title: "5 Reasons Why Listicles Are Stupid",
-    author: "Generic Name Here",
-    medium: ["Facebook", "Twitter", "Instagram", "Printed Media"],
-    date: Date.now
+const dummyContent = mongoose.Schema({
+  user: "The X Co.",
+  title: "We Need To Stop Being Annoying",
+  author: "White People",
+  medium: ["Facebook", "Instagram", "Twitter"],
+  date: Date.now,
+  campaign: "Fall 2017",
+  score: {
+    purchase_intent: 3,
+    brand_favorability: 10
+  }
 });
 
 
-dummyPost.save(function (err, dummy) {
+dummyContent.save(function (err, dummy) {
   if (err) return console.error(err);
   console.log(dummy.title, ' has been saved into the database.');
 }); //save function

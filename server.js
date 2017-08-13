@@ -22,7 +22,7 @@ db.once('open', function() {
   console.log('Connected to ContentIntent Database');
 }); //end db.once() function
 
-var usersController = require('./controllers/users.js');
+var usersController = require('./controllers/userController.js');
 app.use('/users', usersController);
 
 // var contentController = require('./controllers/content.js');

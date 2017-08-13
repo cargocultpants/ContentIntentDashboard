@@ -8,31 +8,30 @@
     <link rel="stylesheet" href="../dist/assets/stylesheets/main.css">
   </head>
   <body>
-    <%- include('../sub-partials/svg'); %>
-    <div id="pagewrapper">
-      <div class="container">
-        <div class="row">
-
-          <!-- sidenav -->
-          <%- include('../sub-partials/sidenav'); %>
-
-          <div class="col-desktop-8">
-            <!-- header -->
-            <%- include('../sub-partials/header'); %>
-
-            <!-- chart -->
-            <%- include('../sub-partials/chart'); %>
-
-            <!-- analytics -->
-            <%- include('../sub-partials/analytics'); %>
-
-            <!-- report -->
-            <%- include('../sub-partials/report'); %>
-          </div>
-        </div>
+    <div class="o-header__title">
+    <!-- sidenav -->
+      <div class="col-desktop-8">
+        <table>
+          <tr>
+            <th id="users">Users</th>
+          </tr>
+          <% for (let user of users) { %>
+            <tr>
+              <td>
+                <a href="/users/<%=user._id%>">
+                  <%=user.name%>
+                </a>
+              </td>
+            </tr>
+            <% } %>
+          </table>
+      <!-- header -->
+      <!-- chart -->
+      <!-- analytics -->
+      <!-- report -->
       </div>
     </div>
-    <script src="../dist/assets/javascript/main.js">
-    </script>
+    <!-- <script src="../dist/assets/javascript/main.js">
+    </script> -->
   </body>
 </html>

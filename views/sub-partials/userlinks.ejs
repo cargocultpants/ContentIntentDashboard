@@ -1,0 +1,13 @@
+<div class="col-desktop-3">
+  <nav class="o-menu">
+    <!-- logo -->
+    <%- include('../partials/logo'); %>
+    <ul class="o-menu__links">
+      <% for (let user of users) { %>
+        <li>
+          <a href="#<%=user._id%>"><%=user.name%></a>
+        </li>
+      <% } %>
+    </ul>
+  </nav>
+</div>

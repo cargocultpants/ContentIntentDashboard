@@ -8,18 +8,33 @@
     <link rel="stylesheet" href="../dist/assets/stylesheets/main.css">
   </head>
   <body>
-    <div class="col-desktop-3">
-      <nav class="o-menu">
-        <!-- logo -->
-        <%- include('../partials/logo'); %>
-        <ul class="o-menu__links">
-          <% for (let user of users) { %>
-            <li>
-              <a href="#<%=user._id%>"><%#user.name%></a>
-            </li>
-          <% } %>
-        </ul>
-      </nav>
+    <%- include('../partials/svg'); %>
+    <div id="pagewrapper">
+      <div class="container">
+        <div class="row">
+          <!-- sidenav -->
+          <%- include('../partials/sidenav'); %>
+
+          <div class="col-desktop-8">
+            <!-- header -->
+            <%- include('../partials/header'); %>
+
+            <!-- chart -->
+            <%- include('../partials/chart'); %>
+
+            <!-- SHOW PAGE -->
+            <%- include('show'); %>
+
+            <!-- analytics -->
+            <%- include('../partials/analytics'); %>
+
+            <!-- report -->
+            <%- include('../partials/report'); %>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="../dist/assets/javascript/main.js">
+    </script>
   </body>
 </html>

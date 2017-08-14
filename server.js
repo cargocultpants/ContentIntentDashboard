@@ -22,16 +22,16 @@ db.once('open', function() {
   console.log('Connected to ContentIntent Database');
 }); //end db.once() function
 
-var usersController = require('./controllers/userController.js');
+const usersController = require('./controllers/userController.js');
 app.use('/users', usersController);
-
-// var contentController = require('./controllers/content.js');
-// app.use('/content', contentController);
 
 // home page
 app.get('/', function(req, res){
-  res.render('index.ejs');
+	res.render('index.ejs');
 });
+
+// var contentController = require('./controllers/content.js');
+// app.use('/content', contentController);
 
 // process.env.PORT is the variable for Heroku's port
 const port = process.env.PORT || 8000;

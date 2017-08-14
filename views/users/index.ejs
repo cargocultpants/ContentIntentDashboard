@@ -12,24 +12,24 @@
     <div id="pagewrapper">
       <div class="container">
         <div class="row">
-          <!-- sidenav -->
-          <%- include('../partials/sidenav'); %>
+          <!-- users sidenav -->
+          <%- include('sidenav'); %>
 
           <div class="col-desktop-8">
             <!-- header -->
             <%- include('../partials/header'); %>
 
-            <!-- chart -->
-            <%- include('../partials/chart'); %>
+            <!-- index -->
+            <%- include('../sub-partials/userlinks'); %>
 
-            <!-- SHOW PAGE -->
-            <%- include('show'); %>
+            <!-- NEW PAGE -->
+            <%# include('new'); %>
 
-            <!-- analytics -->
-            <%- include('../partials/analytics'); %>
+            <!-- edit -->
+            <%# include('edit'); %>
 
-            <!-- report -->
-            <%- include('../partials/report'); %>
+            <!-- remove -->
+            <%# include('remove'); %>
           </div>
         </div>
       </div>

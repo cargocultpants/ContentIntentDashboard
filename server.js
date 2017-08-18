@@ -1,8 +1,9 @@
 // Dependencies
 const express = require('express');
 const app = express();
-const serveStatic = require('serve-static');
+// const serveStatic = require('serve-static');
 const mongoose = require('mongoose');
+const uri = 'mongodb://heroku_b7l5h84r:d72i2peoj8gcj8rd65sf9euk6a@ds133340.mlab.com:33340/heroku_b7l5h84r';
 
 
 ////////////// Application Settings ////////////
@@ -12,7 +13,9 @@ app.use(express.static('public'));
 
 // Open a connection to the ContentIntent database on locally running instance of MongoDB
 
-mongoose.connect('mongodb://localhost:27017/contentintent');
+// mongoose.connect('mongodb://localhost:27017/contentintent');
+mongoose.connect(uri);
+
 
 // Get notified about connection's success
 

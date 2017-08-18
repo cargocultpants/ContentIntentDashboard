@@ -32,7 +32,7 @@ const shannon = new User({
 });
 shannon.verify();
 
-// jonah.save(function (err, shannon) {
+// shannon.save(function (err, shannon) {
 //   if (err) return console.error(err);
 //   console.log(shannon.name, ' has been saved into the database.');
 // }); //save function

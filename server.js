@@ -14,7 +14,7 @@ app.use(express.static('public'));
 // Open a connection to the ContentIntent database on locally running instance of MongoDB
 
 // mongoose.connect('mongodb://localhost:27017/contentintent');
-mongoose.connect(uri);
+mongoose.connect(uri, { useMongoClient: true });
 
 
 // Get notified about connection's success

@@ -1,7 +1,7 @@
 <ul class="o-menu__links">
   <% for (let user of users) { %>
     <li>
-      <a href="#<%=user._id%>"><%=user.name%></a>
+      <a href="/users/<%=user._id%>"><%=user.name%></a>
     </li>
   <% } %>
 </ul>

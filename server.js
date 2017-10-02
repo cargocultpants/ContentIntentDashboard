@@ -35,8 +35,8 @@ app.get('/', function(req, res){
 });
 
 // CONTROLLERS
-const usersController = require('./controllers/userController.js');
-app.use('/users', usersController);
+// const usersController = require('./controllers/userController.js');
+// app.use('/users', usersController);
 
 // const contentController = require('./controllers/content.js');
 // app.use('/content', contentController);

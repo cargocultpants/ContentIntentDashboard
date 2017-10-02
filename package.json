@@ -17,5 +17,12 @@
     "mongoose": "^4.11.6",
     "nodemon": "^1.11.0",
     "webpack": "^3.6.0"
+  },
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.0.0",
+    "babel-preset-env": "^1.6.0"
   }
 }

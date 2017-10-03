@@ -12,30 +12,25 @@
     <div id="pagewrapper">
       <div class="container">
         <div class="row">
-
           <!-- sidenav -->
-          <%# include('partials/sidenav'); %>
+          <%- include('partials/sidenav'); %>
 
           <div class="col-desktop-8">
             <!-- header -->
-            <%# include('partials/header'); %>
-
-            <!-- chart -->
-            <%# include('partials/chart'); %>
+            <%- include('partials/header'); %>
 
             <!-- usermatch -->
-            <%# include('users/usermatch'); %>
+            <%# include('partials/main'); %>
 
-            <!-- analytics -->
-            <%# include('partials/analytics'); %>
+            <!-- users index -->
+            <%# include('users/index'); %>
 
-            <!-- report -->
-            <%# include('partials/report'); %>
+            <!-- content index-->
+            <%# include('content/index'); %>
+
           </div>
         </div>
       </div>
     </div>
-    <script src="../dist/assets/javascript/main.js">
-    </script>
   </body>
 </html>

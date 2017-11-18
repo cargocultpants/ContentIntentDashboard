@@ -1,0 +1,22 @@
+{
+  "name": "contentintentdashboard",
+  "version": "1.0.0",
+  "description": "A social media marketing optimization tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smtlb/ContentIntentDashboard.git"
+  },
+  "author": "Shannon Matloob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smtlb/ContentIntentDashboard/issues"
+  },
+  "homepage": "https://github.com/smtlb/ContentIntentDashboard#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

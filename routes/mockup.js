@@ -8,7 +8,16 @@ var router = express.Router();
 
 /* GET mockup */
 router.get('/', function(req, res, next) {
-  res.render('mockup');
+  res.render('mockup',
+  {
+    name: 'Shannon',
+    initials: 'SM',
+    category: [
+      'main',
+      'analytics',
+      'report'
+    ]
+  });
 });
 
 module.exports = router;

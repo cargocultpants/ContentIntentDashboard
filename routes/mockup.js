@@ -10,8 +10,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('mockup',
   {
-    name: 'Shannon',
-    initials: 'SM',
+    name: 'Jonah',
+    initials: 'JB',
     category: [
       'main',
       'analytics',

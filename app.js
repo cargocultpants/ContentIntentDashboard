@@ -5,6 +5,19 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+// set up and get default mongoose connection
+var mongoDB = 'mongodb://127.0.0.1/my_database';
+mongoose.connect(mongoDB, {
+  useMongoClient: true
+});
+
+// default connection object
+var db = mongoose.connection;
+
+// bind connection to error event
+db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 
 
 // import modules from routes directory

@@ -1,32 +1,32 @@
 // import dependencies and path node library
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 // set up and get default mongoose connection
-var mongoDB = 'mongodb://127.0.0.1/my_database';
+const mongoDB = 'mongodb://127.0.0.1/my_database';
 mongoose.connect(mongoDB, {
   useMongoClient: true
 });
 
 // default connection object
-var db = mongoose.connection;
+const db = mongoose.connection;
 
 // bind connection to error event
 db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 
 
 // import modules from routes directory
-var index = require('./routes/index');
-var users = require('./routes/users');
-var mockup = require('./routes/mockup');
+const index = require('./routes/index');
+const users = require('./routes/users');
+const mockup = require('./routes/mockup');
 
 // create app object
-var app = express();
+const app = express();
 
 // set up view template engine
 app.set('views', path.join(__dirname, 'views'));
@@ -49,7 +49,7 @@ app.use('/mockup', mockup);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });

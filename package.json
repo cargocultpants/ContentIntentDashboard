@@ -1,17 +1,37 @@
 {
-  "name": "contentintentdashboard",
   "version": "0.0.0",
+  "name": "contentintentdashboard",
+  "description": "A social media marketing optimization tool (proof of concept)",
+  "author": {
+    "name": "Shannon Matloob",
+    "email": "shannon@shannonmatloob.com"
+  },
+  "license": "ISC",
+  "type": "git",
+  "url": "https://github.com/smtlb/ContentIntentDashboard.git",
+  "bugs": {
+  "url": "https://github.com/smtlb/ContentIntentDashboard/issues"
+  },
+  "homepage": "https://github.com/smtlb/ContentIntentDashboard"
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www"
   },
+  "engines": {
+    "node": "8.7.0"
+  },
+  "directories": {
+    "bin": "./bin",
+  },
+  "main": "./app.js",
   "dependencies": {
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "^2.5.7",
     "express": "~4.15.5",
+    "foreman": "2.0.0",
     "mongoose": "^4.13.4",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5"

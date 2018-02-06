@@ -24,3 +24,5 @@ app.set('view engine', 'ejs');
 app.listen(port, () => {
   console.log('Server listening on port:  ', port);
 });
+
+module.exports = index.js;

@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
-const router = express.Router();
 const port = 3000;
 
 
 // set view directory and view engine to ejs
-app.set('views', '/views');
+app.set('views', './views');
 app.set('view engine', 'ejs');
 
 /* GET home page. */
@@ -15,7 +14,7 @@ app.set('view engine', 'ejs');
   });
 */
 
- // __dirname will provide the current directly where the command was run
+ // set home route
  app.use('/', (req, res) => {
    res.render('index', {
      title: 'ContentIntent'

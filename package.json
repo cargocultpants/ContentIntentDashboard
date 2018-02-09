@@ -28,7 +28,8 @@
     "ejs": "2.5.7",
     "express": "~4.15.5",
     "mongodb": "3.0.1",
-    "nodemon": "1.14.1",
+    "mongoose": "5.0.4",
+    "nodemon": "1.14.12",
     "serve-favicon": "~2.4.5",
     "serve-static": "1.13.1"
   }

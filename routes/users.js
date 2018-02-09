@@ -1,17 +1,17 @@
 // load express module
-var express = require('express');
+const express = require('express');
+const router = express.Router();
 
-// use express module to get express.Router object
-var router = express.Router();
+const model = require('../models/user-model.js');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('Users listing');
+
+// define the users route
+router.get('/', function(req, res) {
+  res.render('users', {
+    title: 'Users',
+
+  });
 });
 
-/* GET content listing. */
-router.get('/content', function(req, res, next) {
-  res.send('Content listing');
-});
 
 module.exports = router;

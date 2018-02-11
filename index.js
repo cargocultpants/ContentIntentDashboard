@@ -1,5 +1,5 @@
 const express = require('express');
-const port = 3000;
+const port = 3000 || process.env.PORT;
 // load users router module
 const app = express();
 require('./mongoose.js');

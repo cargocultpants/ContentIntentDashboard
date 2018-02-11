@@ -1,10 +1,10 @@
 // load express module
 const express = require('express');
-const router = express.Router();
+const usersRouter = express.Router();
 const User = require('../models/users-model.js');
 
 // returns all users
-router.get('/', function(req, res) {
+usersRouter.get('/', function(req, res) {
   User.find(function (err, allUsers) {
     if (err) {
       return console.error(err);
@@ -18,14 +18,4 @@ router.get('/', function(req, res) {
 });
 
 
-// define the users route
-/*router.get('/', function(req, res) {
-  res.render('users-view', {
-    title: 'Users',
-    users: jonah.name
-  });
-  console.table(Object.values(User));
-});*/
-
-
-module.exports = router;
+module.exports = usersRouter;

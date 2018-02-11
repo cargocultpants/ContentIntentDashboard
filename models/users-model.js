@@ -15,6 +15,10 @@ userSchema.methods.namify = function() {
   return first + " " + last;
 }
 
+/*TO-DO
+make initializer function that gets user's initials
+*/
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

@@ -27,8 +27,10 @@
         </div>
         <div class="col-desktop-8">
           <header class="o-header">
-            <h5 class="o-header__title">Welcome Back, <%= name %>!</h5>
-            <div class="o-header__profile"><span><%= initials %></span></div>
+            <% for (let user of users) { %>
+              <h5 class="o-header__title">Welcome Back, <%= user.namify() %>!</h5>
+              <div class="o-header__profile"><span><%= user.name.first[0] %></span></div>
+            <% } %>
           </header>
           <div class="tabs-target is-active" id="main">
             <div class="row">

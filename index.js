@@ -12,8 +12,6 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 app.set('routes', './routes');
 
-/* GET home page. */
-
  // set home route
  app.get('/', (req, res) => {
    res.render('index-view', {
@@ -21,10 +19,16 @@ app.set('routes', './routes');
    })
  });
 
+// set users route
 const users = require('./routes/users-route.js');
-
 // set users route
 app.use('/users', users);
+
+// set mockup route
+const mockup = require('./routes/mockup-route.js');
+// set mockup route
+app.use('/mockup', mockup);
+
 
 app.listen(port, () => {
   console.log('Server listening on port:  ', port);

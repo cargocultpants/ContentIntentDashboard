@@ -1,23 +1,20 @@
-var express = require('express');
-var router = express.Router();
+// load express module
+const express = require('express');
+const mockupRouter = express.Router();
+const User = require('../models/users-model.js');
 
-/* GET home page. */
-/*router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});*/
-
-/* GET mockup */
-router.get('/', function(req, res, next) {
-  res.render('mockup',
-  {
-    name: 'Jonah',
-    initials: 'JB',
-    category: [
-      'main',
-      'analytics',
-      'report'
-    ]
+// returns all users
+mockupRouter.get('/', function(req, res) {
+  User.find(function (err, allUsers) {
+    if (err) {
+      return console.error(err);
+    } else {
+      res.render('mockup-view', {
+        users: allUsers
+      });
+    }
   });
 });
 
-module.exports = router;
+
+module.exports = mockupRouter;

@@ -1,8 +1,16 @@
-class User {
-  constructor(first, last) {
-    this.name = first + " " + last;
-    this.admin = true;
-  }
-}
+const admin = new User({
+  name: {
+    first: 'Jonah',
+    last: 'Bliss'
+  },
+  admin: true,
+});
 
-module.exports = User;
+console.log(admin);
+
+admin.save(function (err, admin) {
+  if (err) return console.error(err);
+  console.log(admin.namify());
+});
+
+module.exports = admin;

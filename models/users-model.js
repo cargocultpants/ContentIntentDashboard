@@ -17,20 +17,5 @@ userSchema.methods.namify = function() {
 
 const User = mongoose.model('User', userSchema);
 
-let admin = new User({
-  name: {
-    first: 'Jonah',
-    last: 'Bliss'
-  },
-  admin: true,
-});
-
-console.log(admin);
-
-admin.save(function (err, admin) {
-  if (err) return console.error(err);
-  console.log(admin.namify());
-});
-
-module.exports = userSchema;
+module.exports = User;
 // used in mongoose.js

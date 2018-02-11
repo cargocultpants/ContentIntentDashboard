@@ -15,7 +15,11 @@
   <hr>
   <main>
     <h1><%= title %></h1>
-    <h2> <%= users %> </h2>
+    <% for (let user of users) { %>
+      <a href="#">
+        <h2> <%= user.namify() %> </h2>
+      </a>
+    <% } %>
   </main>
 </body>
 

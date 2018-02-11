@@ -28,8 +28,12 @@
         <div class="col-desktop-8">
           <header class="o-header">
             <% for (let user of users) { %>
-              <h5 class="o-header__title">Welcome Back, <%= user.namify() %>!</h5>
-              <div class="o-header__profile"><span><%= user.name.first[0] %></span></div>
+              <h5 class="o-header__title"> <%= user.fullName %></h5>
+              <div class="o-header__profile">
+                <a href="/<%= user.minify %>">
+                  <span><%= user.name.first[0] %></span>
+                </a>
+              </div>
             <% } %>
           </header>
           <div class="tabs-target is-active" id="main">

@@ -9,11 +9,16 @@ const userSchema = new mongoose.Schema({
   joinDate: { type: Date, default: Date.now }
 });
 
-userSchema.methods.namify = function() {
-  const first = this.name.first;
-  const last = this.name.last;
-  return first + " " + last;
-}
+// returns first 5 digits of user ID
+userSchema.virtual('minify').get(function () {
+  return this.id.slice(0,5);
+});
+
+// returns full name
+userSchema.virtual('fullName').get(function () {
+  return this.name.first + ' ' + this.name.last;
+});
+
 
 /*TO-DO
 make initializer function that gets user's initials

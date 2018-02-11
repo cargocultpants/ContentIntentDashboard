@@ -9,6 +9,12 @@ const userSchema = new mongoose.Schema({
   joinDate: { type: Date, default: Date.now }
 });
 
+userSchema.methods.namify = function() {
+  const first = this.name.first;
+  const last = this.name.last;
+  return first + " " + last;
+}
+
 const User = mongoose.model('User', userSchema);
 
 let admin = new User({
@@ -23,7 +29,8 @@ console.log(admin);
 
 admin.save(function (err, admin) {
   if (err) return console.error(err);
-  console.log(admin.name);
+  console.log(admin.namify());
 });
 
 module.exports = userSchema;
+// used in mongoose.js

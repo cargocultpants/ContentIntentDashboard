@@ -2,7 +2,7 @@ const express = require('express');
 const port = 3000;
 // load users router module
 const app = express();
-require('./app.js');
+require('./mongoose.js');
 
 // serve status files from public directory
 app.use(express.static(__dirname + '/public'));
@@ -16,12 +16,12 @@ app.set('routes', './routes');
 
  // set home route
  app.get('/', (req, res) => {
-   res.render('index', {
+   res.render('index-view', {
      title: 'Dashboard'
    })
  });
 
-const users = require('./routes/users.js');
+const users = require('./routes/users-route.js');
 
 // set users route
 app.use('/users', users);

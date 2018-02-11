@@ -6,7 +6,7 @@ const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  require('./models/user-model.js');
+  require('./models/users-model.js');
 });
 
 module.exports = db;

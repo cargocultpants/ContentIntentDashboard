@@ -1552,8 +1552,8 @@ a
 .o-pane--blue .o-pane__contents,
 .o-pane--green .o-pane__contents
 {
-    font-family: Arial, sans-serif;
-    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
 
     padding-top: 25px;
 }
@@ -1562,9 +1562,32 @@ a
 .o-pane--blue .o-pane__contents h1,
 .o-pane--green .o-pane__contents h1
 {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
     font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.o-pane--yellow .o-pane__contents h2,
+.o-pane--blue .o-pane__contents h2,
+.o-pane--green .o-pane__contents h2
+{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.o-pane--yellow .o-pane__contents h3,
+.o-pane--blue .o-pane__contents h3,
+.o-pane--green .o-pane__contents h3
+{
+    font-family: 'Raleway', sans-serif;
+    font-size: .75rem;
+    font-weight: 400;
+		font-style: italic;
 
     margin-bottom: 20px;
 }

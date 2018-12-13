@@ -15,9 +15,7 @@ app.set('routes', './routes');
 
  // set home route
  app.get('/', (req, res) => {
-   res.render('index-view', {
-     title: 'Dashboard'
-   })
+   res.render('mockup-view')
  });
 
 // set users route

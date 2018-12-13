@@ -1,19 +1,11 @@
 // load express module
 const express = require('express');
 const mockupRouter = express.Router();
-const User = require('../models/users-model.js');
+// const User = require('../models/users-data.js');
 
 // returns all users
 mockupRouter.get('/', function(req, res) {
-  User.find(function (err, allUsers) {
-    if (err) {
-      return console.error(err);
-    } else {
-      res.render('mockup-view', {
-        users: allUsers
-      });
-    }
-  });
+  res.render('mockup-view');
 });
 
 

@@ -3,7 +3,7 @@ const express = require('express');
 const port = process.env.PORT || 8080;
 // load users router module
 const app = express();
-require('./mongoose.js');
+// require('./mongoose.js');
 
 // serve status files from public directory
 app.use(express.static(__dirname + '/public'));
@@ -21,9 +21,9 @@ app.set('routes', './routes');
  });
 
 // set users route
-const users = require('./routes/users-route.js');
+// const users = require('./routes/users-route.js');
 // set users route
-app.use('/users', users);
+// app.use('/users', users);
 
 // set mockup route
 const mockup = require('./routes/mockup-route.js');

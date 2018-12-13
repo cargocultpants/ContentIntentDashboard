@@ -8,11 +8,11 @@
   },
   "license": "ISC",
   "type": "git",
-  "url": "https://github.com/smtlb/ContentIntentDashboard.git",
+  "url": "https://github.com/shannonmatloob/ContentIntentDashboard.git",
   "bugs": {
-    "url": "https://github.com/smtlb/ContentIntentDashboard/issues"
+    "url": "https://github.com/shannonmatloob/ContentIntentDashboard/issues"
   },
-  "homepage": "https://github.com/smtlb/ContentIntentDashboard",
+  "homepage": "https://github.com/shannonmatloob/ContentIntentDashboard",
   "private": true,
   "scripts": {
     "start": "nodemon"
@@ -22,14 +22,14 @@
   },
   "main": "index.js",
   "dependencies": {
-    "body-parser": "~1.18.2",
+    "body-parser": "^1.18.3",
     "debug": "~2.6.9",
     "dotenv": "5.0.0",
     "ejs": "2.5.7",
-    "express": "~4.15.5",
-    "mongodb": "3.0.1",
-    "mongoose": "5.0.4",
-    "nodemon": "1.14.12",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.16",
+    "nodemon": "^1.18.8",
     "serve-favicon": "~2.4.5",
     "serve-static": "1.13.1"
   }

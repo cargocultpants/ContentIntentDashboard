@@ -22,19 +22,16 @@
               <li><a class="is-active" href="#main">Main</a></li>
               <li><a href="#analytics">Analytics History</a></li>
               <li><a href="#report">New Report</a></li>
+							<li><a href="#glossary">Glossary</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-desktop-8">
           <header class="o-header">
-            <% for (let user of users) { %>
-              <h5 class="o-header__title"> <%= user.fullName %></h5>
+              <h5 class="o-header__title"> Jonah Bliss</h5>
               <div class="o-header__profile">
-                <a href="/<%= user.minify %>">
-                  <span><%= user.name.first[0] %></span>
-                </a>
+                  <span>J</span>
               </div>
-            <% } %>
           </header>
           <div class="tabs-target is-active" id="main">
             <div class="row">
@@ -134,6 +131,32 @@
                       at, pharetra eu, sodales sit amet, elit. Curabitur urna tellus, aliquam vitae, ultrices eget, vehicula nec, diam. Integer elementum, felis non faucibus euismod, erat massa dictum eros, eu ornare ligula tortor et mauris. Cras molestie
                       magna in nibh. Aenean et tellus. Fusce adipiscing commodo erat. In eu justo. Nulla dictum, erat sed blandit venenatis, arcu dolor molestie dolor, vitae congue orci risus a nulla. Pellentesque sit amet arcu. In mattis laoreet enim.
                       Pellentesque id augue et arcu blandit tincidunt. Pellentesque elit ante, rhoncus quis, dapibus sit amet, tincidunt eu, nibh.</p>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+					<div class="tabs-target" id="glossary">
+            <div class="row">
+              <div class="col-desktop-12">
+                <section class="o-pane--green match-heights">
+                  <header><span class="o-pane__dot"></span>
+                    <h2>Glossary</h2>
+                  </header>
+                  <div class="o-pane__contents">
+                    <h1>Glossary</h1>
+										<ul class="o-pane__contents">
+											<li>
+												<h2>Brand Favorability</h2>
+												<h3>Expressing positive sentiment towards the brand</h3>
+												  <p>Does your content do more than just garner more followers? Which aspects of your marketing strategy - and on which platforms - lead to action? You want more than merely content engagement; you want your content to provide <i>measurable results</i>.</p> <br>
+											</li>
+											<li>
+												<h2>Purchase Intent</h2>
+												<h3>The likelihood of an individual purchasing from your brand within the next year</h3>
+												  <p>Content drives purchase intent, but in which direction? ContentIntent breaks down how different categories of your content affect your market, and by how much.</p> <br>
+											</li>
+										</ul>
                   </div>
                 </section>
               </div>
